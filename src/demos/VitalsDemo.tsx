@@ -130,13 +130,10 @@ function VitalCard({ vital }: { vital: Vital }) {
 }
 
 export function VitalsDemo({ optimized }: { optimized: boolean }) {
-  // const [vitals, setVitals] = useState(() => buildVitals(optimized))
-  const [tick, setTick] = useState(0)
+  const [tick, setTick] = useState(0);
 
   useEffect(() => {
-    // setVitals(buildVitals(optimized))
     const interval = setInterval(() => {
-      // setVitals(buildVitals(optimized))
       setTick((t) => t + 1)
     }, 2000)
     return () => clearInterval(interval)
